@@ -1,18 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-   images: {
+
+  images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
-       
+        protocol: "https",
+        hostname: "i.ibb.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co.com",
+        pathname: "/**",
       },
     ],
   },
-
 };
 
 export default nextConfig;
