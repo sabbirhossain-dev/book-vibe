@@ -1,6 +1,7 @@
 import { IBook } from "@/types/bookTypes";
 import Image from "next/image";
 import React from "react";
+import ViewButton from "./homePage/ViewButton";
 
 const BookCard = ({ book }: { book: IBook }) => {
   return (
@@ -42,6 +43,8 @@ const BookCard = ({ book }: { book: IBook }) => {
             {book.rating}
           </li>
         </ul>
+
+        <ViewButton book={book} />
       </div>
     </div>
   );

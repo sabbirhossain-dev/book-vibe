@@ -7,7 +7,7 @@ import React from "react";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="bg-base-100 shadow-xs">
+    <div className="bg-base-100 shadow-xs sticky top-0 z-10">
       <div className="container navbar py-8">
         <div className="navbar-start">
           <div className="dropdown">
@@ -43,6 +43,19 @@ const Navbar = () => {
                   }`}
                 >
                   Home
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/all-books"
+                  className={`font-normal text-[18px] ${
+                    pathname === "/all-books"
+                      ? "text-red-500 border-b-2 border-red-500"
+                      : "text-[#131313] opacity-80"
+                  }`}
+                >
+                  All Books
                 </Link>
               </li>
 
@@ -93,6 +106,20 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+
+            <li>
+              <Link
+                href="/all-books"
+                className={`font-normal text-[16px] px-2 py-1  ${
+                  pathname === "/all-books"
+                    ? "text-green-500 border border-green-500 rounded-md"
+                    : "text-[#131313] opacity-80"
+                }`}
+              >
+                All Books
+              </Link>
+            </li>
+
             <li>
               <Link
                 href="/listed-books"

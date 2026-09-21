@@ -9,5 +9,7 @@ export interface IBook {
     category: string,
     tags: string[],
     publisher: string,
-    yearOfPublishing: number
+    yearOfPublishing: number,
+    popular:boolean,
+    totalPage:number
 }

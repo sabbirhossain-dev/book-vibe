@@ -10,7 +10,8 @@
     "category": "Classic",
     "tags": ["Fiction", "Romance"],
     "publisher": "Scribner",
-    "yearOfPublishing": 1925
+    "yearOfPublishing": 1925,
+    "popular": true
   },
   {
     "bookId": 2,
@@ -23,7 +24,9 @@
     "category": "Fiction",
     "tags": ["Drama", "Social Justice"],
     "publisher": "J.B. Lippincott & Co.",
-    "yearOfPublishing": 1960
+    "yearOfPublishing": 1960,
+    "popular": true
+
   },
   {
     "bookId": 3,
@@ -36,7 +39,9 @@
     "category": "Fiction",
     "tags": ["Dystopian", "Political"],
     "publisher": "Secker & Warburg",
-    "yearOfPublishing": 1949
+    "yearOfPublishing": 1949,
+    "popular": false
+
   },
   {
     "bookId": 4,
@@ -49,7 +54,9 @@
     "category": "Fiction",
     "tags": ["Young Adult", "Identity"],
     "publisher": "Little, Brown and Company",
-    "yearOfPublishing": 1951
+    "yearOfPublishing": 1951,
+    "popular": false
+
   },
   {
     "bookId": 5,
@@ -62,7 +69,9 @@
     "category": "Classic",
     "tags": ["Romance", "Satire"],
     "publisher": "T. Egerton, Whitehall",
-    "yearOfPublishing": 1813
+    "yearOfPublishing": 1813,
+    "popular": true
+
   },
   {
     "bookId": 6,
@@ -75,7 +84,9 @@
     "category": "Fantasy",
     "tags": ["Adventure", "Epic"],
     "publisher": "Allen & Unwin",
-    "yearOfPublishing": 1937
+    "yearOfPublishing": 1937,
+    "popular": true
+
   },
   {
     "bookId": 7,
@@ -88,7 +99,9 @@
     "category": "Fantasy",
     "tags": ["Magic", "Young Adult"],
     "publisher": "Bloomsbury",
-    "yearOfPublishing": 1997
+    "yearOfPublishing": 1997,
+    "popular": true
+
   },
   {
     "bookId": 8,
@@ -101,7 +114,9 @@
     "category": "Fiction",
     "tags": ["Philosophical", "Adventure"],
     "publisher": "HarperCollins",
-    "yearOfPublishing": 1988
+    "yearOfPublishing": 1988,
+    "popular": false
+
   },
   {
     "bookId": 9,
@@ -114,6 +129,8 @@
     "category": "Mystery",
     "tags": ["Suspense", "Psychological"],
     "publisher": "Riverhead Books",
-    "yearOfPublishing": 2015
+    "yearOfPublishing": 2015,
+    "popular": true
+
   }
 ]
