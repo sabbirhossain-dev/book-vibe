@@ -22,7 +22,7 @@ const ListedPage = () => {
       <button className="font-bold btn rounded-l-none">Wishlist Books</button>
 
       {readBooks.length === 0 ? (
-        <p>No read books found.</p>
+        <p className="text-red-500 text-center">No read books found.</p>
       ) : (
         <div className="flex flex-col gap-5 my-10">
           {readBooks.map((book: IBook) => (
