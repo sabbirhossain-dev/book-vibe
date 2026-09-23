@@ -5,14 +5,14 @@ import ViewButton from "./ViewButton";
 
 const BookCard = ({ book }: { book: IBook }) => {
   return (
-    <div className="border border-gray-200 rounded-lg p-6 bg-gray-50 shadow-gray-400 shadow-md">
-      <div className="overflow-hidden">
+    <div className="border border-gray-200 rounded-lg p-6 cursor-grab bg-gray-50 shadow-gray-400 hover:border-green-300 hover:shadow-md transition-all duration-300">
+      <div className="overflow-hidden bg-gray-200 p-7 flex justify-center items-center">
         <Image
           src={book.image}
           alt={`${book.bookName} image`}
           width={500}
           height={500}
-          className="w-full h-75 object-cover rounded-2xl hover:scale-105 transition-transform duration-300 "
+          className="w-1/2 h-60 object-cover rounded-2xl hover:scale-105 transition-transform duration-300 "
           unoptimized
         />
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { IBook } from "@/types/bookTypes";
 import RemoveButton from "./RemoveRedButton";
+import ViewButton from "./ViewButton";
 
 const ReadBooksCard = ({ book }: { book: IBook }) => {
   return (
@@ -79,6 +80,10 @@ const ReadBooksCard = ({ book }: { book: IBook }) => {
             <button className="rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-500">
               ⭐ {book.rating}
             </button>
+
+            <span className="ml-5">
+              <ViewButton book={book} />
+            </span>
           </div>
         </div>
         <RemoveButton id={book.bookId} />

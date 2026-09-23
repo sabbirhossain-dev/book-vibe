@@ -86,7 +86,7 @@ const WishListCard = ({ book }: { book: IBook }) => {
               </span>
 
               {/* View Button */}
-              <span>
+              <span className="ml-5">
                 <ViewButton book={book} />
               </span>
             </div>
