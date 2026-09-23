@@ -1,5 +1,6 @@
 import PopularBooks from "@/components/homePage/PopularBooks";
 import ReadButton from "@/components/ReadButton";
+import WishListButton from "@/components/WishListButton";
 import { IBook } from "@/types/bookTypes";
 import Image from "next/image";
 import React from "react";
@@ -164,23 +165,7 @@ const BookDetailsPage = async ({ params }: IbookId) => {
               <div className="flex flex-wrap gap-2.5 pt-4 sm:gap-3 sm:pt-5">
                 <ReadButton book={bookDetails} />
 
-                <button
-                  className="
-                    rounded-md
-                    bg-green-600
-                    px-4
-                    py-2
-                    text-sm
-                    font-semibold
-                    text-white
-                    transition
-                    hover:bg-green-700
-                    sm:px-5
-                    sm:py-2.5
-                  "
-                >
-                  Wishlist
-                </button>
+                <WishListButton book={bookDetails} />
               </div>
             </div>
           </div>

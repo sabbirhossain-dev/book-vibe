@@ -1,4 +1,5 @@
 "use client";
+
 import { BooksContext } from "@/context/page";
 import { IBook } from "@/types/bookTypes";
 import React, { useContext } from "react";
@@ -6,26 +7,40 @@ import React, { useContext } from "react";
 interface ReadBookType {
   book: IBook;
 }
+
 const ReadButton = ({ book }: ReadBookType) => {
-  const { setReadBooks, readBooks } = useContext(BooksContext);
+  const context = useContext(BooksContext);
 
-  const handleReadClick = () => {
-    setReadBooks((prev: IBook[]) => [...prev, book]);
-    console.log("added");
-    console.log(readBooks);
-  };
-
+  if (!context) {
+    throw new Error("BooksProvider is missing");
+  }
+  const { setReadBooks, readBooks } = context;
   const isSelected = readBooks.some(
     (selectedBook: IBook) => selectedBook.bookId === book.bookId,
   );
 
+  const handleReadClick = () => {
+    setReadBooks((prev: IBook[]) => {
+      const updatedBooks = [...prev, book];
+
+      console.log("Added:", book);
+      console.log("Read Books:", updatedBooks);
+
+      return updatedBooks;
+    });
+  };
+
   return (
     <button
-      className={`"rounded-md border border-gray-400 px-4 py-2 text-sm font-semibold transition hover:bg-gray-100 sm:px-5 sm:py-2.5 cursor-pointer" ${isSelected ? "text-green-600 border-green-700 cursor-not-allowed" : "cursor-pointer"}`}
+      className={`rounded-md border px-4 py-2 text-sm font-semibold transition sm:px-5 sm:py-2.5 ${
+        isSelected
+          ? "cursor-not-allowed border-green-600 bg-green-50 text-green-700 opacity-80"
+          : "cursor-pointer border-gray-400 text-gray-700 hover:bg-gray-100"
+      }`}
       onClick={handleReadClick}
       disabled={isSelected}
     >
-      {isSelected ? "Saved as Read" : "Read"}
+      {isSelected ? "✓ Saved as Read" : "Read"}
     </button>
   );
 };

@@ -1,7 +1,7 @@
 import { IBook } from "@/types/bookTypes";
 import Image from "next/image";
 import React from "react";
-import ViewButton from "./homePage/ViewButton";
+import ViewButton from "./ViewButton";
 
 const BookCard = ({ book }: { book: IBook }) => {
   return (
@@ -35,7 +35,7 @@ const BookCard = ({ book }: { book: IBook }) => {
           By: {book.author}
         </p>
 
-        <ul className="flex justify-between gap-5">
+        <ul className="flex justify-between gap-5 pb-7">
           <li className="font-medium text-[16px] opacity-80 text-[#131313]">
             {book.publisher}
           </li>

@@ -11,7 +11,7 @@ const ViewButton = ({ book }: ViewButtonProps) => {
   return (
     <>
       <Link href={`/all-books/${book.bookId}`}>
-        <button className="btn btn-neutral mt-7">View More</button>
+        <button className="btn btn-neutral h-9">View More</button>
       </Link>
     </>
   );

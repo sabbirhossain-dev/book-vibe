@@ -1,29 +1,30 @@
 import React from "react";
 import Image from "next/image";
 import { IBook } from "@/types/bookTypes";
-import RemoveButton from "./RemoveRedButton";
+import RemoveWishListButton from "./RemoveWishListButton";
+import ReadButton from "./ReadButton";
+import ViewButton from "./ViewButton";
 
-const ReadBooksCard = ({ book }: { book: IBook }) => {
+const WishListCard = ({ book }: { book: IBook }) => {
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center gap-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md sm:p-5 md:flex-row md:p-6">
+    <div className="">
+      <div className="flex h-full flex-col gap-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md sm:p-5">
         {/* Book Image */}
-        <div className="flex w-full items-center justify-center rounded-xl bg-gray-100 p-6 sm:p-8 md:w-1/6">
+        <div className="flex w-full items-center justify-center rounded-xl bg-gray-100 p-5">
           <Image
             src={book.image}
             alt={`${book.bookName} image`}
             width={300}
             height={200}
             unoptimized
-            className="h-[180px] w-full object-contain transition-transform duration-300 hover:scale-105 sm:h-[200px]"
+            className="h-[200px] w-full object-contain transition-transform duration-300 hover:scale-105"
           />
         </div>
 
         {/* Book Information */}
-        <div className="flex-1">
-          {/* Title & Author */}
+        <div className="flex flex-1 flex-col">
           <div className="mb-4 border-b border-gray-200 pb-4">
-            <h3 className="text-2xl font-bold text-[#131313]">
+            <h3 className="text-xl font-bold text-[#131313]">
               {book.bookName}
             </h3>
 
@@ -70,21 +71,35 @@ const ReadBooksCard = ({ book }: { book: IBook }) => {
             </p>
           </div>
 
-          {/* Category & Rating */}
-          <div className="flex flex-wrap gap-3">
-            <button className="rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
-              {book.category}
-            </button>
+          <div className="flex justify-between gap-5">
+            {/* Category & Rating */}
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Category */}
+              <span className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
+                {book.category}
+              </span>
 
-            <button className="rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-500">
-              ⭐ {book.rating}
-            </button>
+              {/* Rating */}
+              <span className="inline-flex items-center gap-1 rounded-full border border-orange-100 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-600">
+                <span className="text-base">★</span>
+                {book.rating}
+              </span>
+
+              {/* View Button */}
+              <span>
+                <ViewButton book={book} />
+              </span>
+            </div>
+
+            {/* Remove Button */}
+            <div className="">
+              <RemoveWishListButton id={book.bookId} />
+            </div>
           </div>
         </div>
-        <RemoveButton id={book.bookId} />
       </div>
     </div>
   );
 };
 
-export default ReadBooksCard;
+export default WishListCard;
