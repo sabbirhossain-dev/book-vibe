@@ -10,7 +10,7 @@ const Banner = () => {
       <div className="flex justify-between items-center bg-[#e0e0e0] p-24 rounded-2xl mt-5">
         <div className="">
           <h2 className="text-[#131313] font-bold text-[56px] mb-10">
-            Books to freshen up <br />
+            Books to freshen up <br /> your bookshelf
           </h2>
           <Link
             href="/all-books"
