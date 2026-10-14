@@ -16,7 +16,7 @@ const Banner = () => {
             href="/all-books"
             className="text-[20px] text-[#ffffff] bg-green-600 px-5 py-2 rounded-md cursor-pointer hover:bg-green-800 transition-all duration-300"
           >
-            View The List
+            View The Book List
           </Link>
         </div>
 
